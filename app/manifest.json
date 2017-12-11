@@ -1,0 +1,25 @@
+{
+  "name": "Amala Bhavan",
+  "short_name": "Amala Bhavan",
+  "icons": [{
+        "src": "images/General.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      }, {
+        "src": "images/General.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      }, {
+        "src": "images/General.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }, {
+        "src": "images/General.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }],
+  "start_url": "/?homescreen=1",
+  "display": "standalone",
+  "background_color": "#2196F3",
+  "gcm_sender_id":"482941778795"
+}

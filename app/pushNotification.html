@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+  <title>Amala Bhavan push notification</title>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script type="text/javascript"  src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js'></script>
+
+  
+  
+</head>
+
+<body>
+<div class="container">
+  <div>
+      <h4>Notification Send</h4>
+
+      <p><div class="row">
+    <form class="col s12">
+    
+ 
+     <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">subject</i>
+          <input id="sub" type="text" class="validate">
+          <label for="sub">Subject</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">date_range</i>
+          <input id="date" type="text" class="datepicker"> 
+          <label for="date">date</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">edit</i>
+          <textarea id="msg" class="materialize-textarea"></textarea>
+          <label for="msg">Message</label>
+        </div>
+      </div>
+    </form>
+  </div></p>
+    </div>
+    <div class="modal-footer">
+      <button  onclick="send()" class="waves-effect waves-light btn right ">Submit</button>
+    </div>
+    </div>
+    
+     
+     <script  src="js/push.js"></script>
+     
+</body>
+</html>

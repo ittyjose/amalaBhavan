@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "ccdd4863-e26e-4677-acc6-5a8117709a8f",
+      autoRegister: true,
+      notifyButton: {
+        enable: false /* Set to false to hide */
+      }
+    }]);
+  </script>
+    <link rel="apple-touch-icon" href="images/General.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/General.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/General.png">
+<link rel="apple-touch-icon" sizes="167x167" href="images/General.png">
+<link rel="apple-touch-startup-image" href="images/General.png">
+<meta name="apple-mobile-web-app-title" content="Amala Bhavan">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="blue">
+     
+  <meta charset="UTF-8">
+  <title>Amala Bhavan</title>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script type="text/javascript"  src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js'></script>
+
+  
+  
+</head>
+
+<body>
+<div class="container">
+<ul id="slide-out" class="side-nav">
+<li><div class="user-view">
+      <div class="background">
+        <img src="images/logo.jpg">
+      </div>
+      <a><span class="title">Amala Bhavan</span></a>
+      
+    </div></li>
+ <li><a onclick="visibleMain()"><i class="material-icons">home</i>Home</a></li>
+    <li><a onclick="visibleNotification()"><i class="material-icons">notifications</i>Notification</a></li>
+    <li><a onclick="visibleFeedback()"><i class="material-icons">create</i>Feedback</a></li>
+    <li><a href="http://www.amalaims.org"><i class="material-icons">language</i>AIMS Website</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+<nav>
+    <div class="nav-wrapper blue lighten-1">
+      <form>
+        <div class="input-field" >
+          <input type="search" class="autocomplete"  required>
+          <label  class="label-icon" for="autocomplete-input"><i class="material-icons  ">search</i></label>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <div id="main">
+   <div id="today" style="display: none;">
+  <ul class="collection" >
+   <li class="collection-item avatar">
+   Today's Events
+      <ul class="collection" id="todo">
+    </ul>
+    </li>
+    </ul>
+  
+  </div>
+  
+   <ul class="collection" >
+   <li class="collection-item avatar">
+      <i class="material-icons circle">warning</i>
+      <span class="title">Emergency Numbers</span>
+      <p>6666 
+      </p>
+      <p onclick="visibleEmergency('emergency')" class="secondary-content"><i class="material-icons">chevron_right</i></p>
+    </li>
+    </ul>
+    </div>
+    <div id="emergency" style="display: none;">
+      <ul class="collection" id="emer">
+      </ul>
+      </div>
+      <div id="notification" style="display: none;">
+      <ul class="collection" id="noti">
+      </ul>
+    </div>
+  <div id="feedback" style="display: none;">
+  <div>
+      <h4>Feedback Form</h4>
+
+      <p><div class="row">
+    <form class="col s12">
+    
+ 
+     <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">edit</i>
+          <textarea id="Des" class="materialize-textarea"></textarea>
+          <label for="Des">Description</label>
+        </div>
+      </div>
+    </form>
+  </div></p>
+    </div>
+    <div class="modal-footer">
+      <button  onclick="feedback()" class="waves-effect waves-light btn right ">Submit</button>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+
+
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
